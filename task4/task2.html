@@ -1,0 +1,68 @@
+<html>
+
+  <head>
+    <head>
+	<style>
+	  .card{
+      border: 1px solid lightblue;
+      display: flex;
+      margin-bottom: 10px;
+    }
+    .info{
+      padding-left: 10px;
+    }
+    .desc{
+      font-family: inherit;
+    }
+    .price{
+      font-weight: bold;
+      padding-top: 40px;
+    }
+    @media (max-width: 400px) {
+      img {
+        display: none;
+      }
+      .desc{
+        display: none;
+      }
+      .info{
+        font-size: 24px;
+        padding: 10px;
+      }
+      .price{
+        display: inline-flex;
+        padding-top: 0px;
+      }
+    }
+	</style>
+    </head>
+  </head>
+
+  <body>
+    <div class="card first">
+      <img src="http://via.placeholder.com/100x100"/>
+      <section class="info">
+        <a href="#">Mercedes C100</a>
+        <div class="desc">В хорошем состоянии</div>
+        <div class="price">10.000$</div>
+      </section>
+    </div>
+    <div class="card">
+      <img src="http://via.placeholder.com/100x100"/>
+      <section class="info">
+        <a href="#">BMW X5</a>
+        <div class="desc">В хорошем состоянии</div>
+        <div class="price">10.000$</div>
+      </section>
+    </div>
+    <div class="card">
+      <img src="http://via.placeholder.com/100x100"/>
+      <section class="info">
+        <a href="#">Audi A8</a>
+        <div class="desc">В хорошем состоянии</div>
+        <div class="price">10.000$</div>
+      </section>
+    </div>
+  </body>
+
+</html>
