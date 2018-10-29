@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+#news{
+	border:1px solid red;
+	width:400px;
+	height:300px;
+}
+</style>
+</head>
+<body>
+
+<div id="news"></div>
+<button id="sport">Load Sport news</button>
+<button id="politics">Load Politics news</button>
+<button id="bussiness">Load Bussiness news</button>
+
+
+<script>
+  function B(response) {
+    return response.text();
+  }
+
+  function C(text) {
+    var div = document.getElementById('news');
+    div.innerHTML = text;
+  }
+
+  function A(event) {
+    var button = event.currentTarget.id;
+    let news = {"sport":"http://demo4296963.mockable.io/news-sport","politics":"http://demo4296963.mockable.io/news-politics","bussiness":"http://demo4296963.mockable.io/news-bussiness"};
+    for (let item in news){
+      if(button === item){
+        fetch(news[item]).then(B).then(C);
+      }
+    }
+
+
+  }
+
+
+
+  var buttons = document.getElementsByTagName('button');
+  for(var i = 0; i<buttons.length;i++){
+    buttons[i].addEventListener('click',A);
+  }
+
+</script>
+</body>
+</html>
